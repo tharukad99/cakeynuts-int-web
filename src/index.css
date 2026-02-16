@@ -1,0 +1,135 @@
+:root {
+  /* Color Palette - Vibrant & Sweet */
+  --color-primary: #FF4081; /* Deep Pink */
+  --color-primary-light: #FF80AB;
+  --color-primary-dark: #C51162;
+  
+  --color-secondary: #00BFA5; /* Teal */
+  --color-secondary-light: #64FFDA;
+  
+  --color-accent: #FFD740; /* Amber/Gold */
+  
+  --color-bg: #FFF5F7; /* Very light pink background */
+  --color-bg-card: #FFFFFF;
+  
+  --color-text-main: #3E2723; /* Dark Brown */
+  --color-text-muted: #795548; /* Light Brown */
+  
+  --color-border: #E0E0E0;
+  
+  /* Spacing & Sizing */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  
+  --shadow-sm: 0 2px 4px rgba(62, 39, 35, 0.05);
+  --shadow-md: 0 8px 16px rgba(62, 39, 35, 0.1);
+  --shadow-lg: 0 16px 32px rgba(62, 39, 35, 0.15);
+  
+  --font-family: 'Outfit', 'Poppins', system-ui, sans-serif;
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Utility Classes */
+.card {
+  background: var(--color-bg-card);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons */
+button, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.2s, background-color 0.2s;
+}
+
+button:active, .btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 14px rgba(255, 64, 129, 0.4);
+  filter: brightness(1.1);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-bg);
+}
+
+/* Form Elements */
+input, select, textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  background-color: var(--color-bg-card);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(255, 64, 129, 0.1);
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--color-text-muted);
+}
