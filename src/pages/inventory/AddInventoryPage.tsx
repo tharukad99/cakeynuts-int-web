@@ -25,7 +25,7 @@ export default function AddInventoryPage() {
             alert("Ingredient added successfully!");
             navigate("/inventory");
         } catch (err) {
-            alert("Failed to add ingredient.");
+            alert("Failed to add Stock.");
             console.error(err);
         } finally {
             setLoading(false);

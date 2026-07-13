@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import logo from "../assets/bb.png";
 import "./layout.css";
 
 interface SidebarProps {
@@ -12,8 +13,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   return (
     <aside className={`sidebar ${isOpen ? "open" : ""}`}>
-      <div className="brand">
-        <span role="img" aria-label="cake">🎂</span> CakeyNuts
+      <div className="brand" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
+        <img src={logo} alt="CakeyNuts Logo" style={{ height: '100px', width: 'auto', borderRadius: '50%' }} />
+        CakeyNuts
       </div>
 
       <div className="section-title">Invoices</div>
@@ -23,16 +25,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       <NavLink to="/invoices/history" className={linkClass} onClick={onClose}>
         View History
       </NavLink>
-      <NavLink to="/invoices/update" className={linkClass} onClick={onClose}>
-        Update Invoice
-      </NavLink>
 
       <div className="section-title">Ingredients / Inventory</div>
       <NavLink to="/inventory" className={linkClass} onClick={onClose}>
-        View All
+        Stock
       </NavLink>
       <NavLink to="/inventory/add" className={linkClass} onClick={onClose}>
-        Add Ingredient
+        Add Stock
       </NavLink>
 
       <div className="section-title">Cost Calculate</div>
