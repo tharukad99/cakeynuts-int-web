@@ -36,17 +36,19 @@ export default function InventoryListPage() {
 
     return (
         <div>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "24px" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", marginBottom: "24px", gap: "16px" }}>
                 <h2>Inventory / Ingredients</h2>
-                <Link to="/inventory/add" className="btn btn-primary">
-                    + Add New Ingredient
-                </Link>
-                <Link to="/inventory/manage" className="btn btn-secondary" style={{ marginLeft: "8px" }}>
-                    Manage Stock/Pending
-                </Link>
+                <div>
+                    <Link to="/inventory/add" className="btn btn-primary">
+                        + Add New
+                    </Link>
+                    <Link to="/inventory/manage" className="btn btn-secondary" style={{ marginLeft: "8px" }}>
+                        Manage
+                    </Link>
+                </div>
             </div>
 
-            <div className="card" style={{ padding: 0, overflow: "hidden" }}>
+            <div className="card table-responsive" style={{ padding: 0, overflow: "hidden" }}>
                 <table style={{ width: "100%", borderCollapse: "collapse" }}>
                     <thead style={{ background: "var(--color-bg)", borderBottom: "2px solid var(--color-border)" }}>
                         <tr>

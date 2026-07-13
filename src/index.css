@@ -133,3 +133,35 @@ label {
   margin-bottom: 6px;
   color: var(--color-text-muted);
 }
+
+/* Responsive Utilities */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  
+  /* Make inline flex buttons stack or expand if needed, though most btn logic is okay */
+  .btn {
+    padding: 8px 16px;
+  }
+}

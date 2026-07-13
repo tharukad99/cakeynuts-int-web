@@ -53,7 +53,7 @@ export default function AddInventoryPage() {
                         />
                     </div>
 
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+                    <div className="form-row">
                         <div>
                             <label>Unit Type</label>
                             <select
@@ -71,7 +71,7 @@ export default function AddInventoryPage() {
                         </div>
                     </div>
 
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+                    <div className="form-row">
                         <div>
                             <label>Cost Per Unit (£)</label>
                             <input

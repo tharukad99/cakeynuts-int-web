@@ -25,7 +25,7 @@ export default function InvoiceHistoryPage() {
         {/* Could add a 'New Invoice' button here */}
       </div>
 
-      <div className="card" style={{ padding: 0, overflow: "hidden" }}>
+      <div className="card table-responsive" style={{ padding: 0, overflow: "hidden" }}>
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
           <thead style={{ background: "var(--color-bg)", borderBottom: "2px solid var(--color-border)" }}>
             <tr>
